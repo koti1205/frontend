@@ -1,0 +1,34 @@
+<!-- <app-header></app-header>
+<app-navbar ></app-navbar>
+<app-popup></app-popup>  -->
+<body ng-controller="HelpCenterController">
+  
+
+  <div class="content" [ngClass]="{'Content':toggleActive}">
+    <h1>Help Center</h1>
+
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p><strong>Toll-Free:</strong> 1800 777 7777</p>
+      <p><strong>Email:</strong> <a href="mailto:support@artha.com">supportartha.com</a></p>
+    </section>
+
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <ul>
+        <li ng-repeat="question in faqs">
+          <strong>Q:</strong>question<br>
+          <strong>A:</strong>question
+        </li>
+      </ul>
+    </section>
+
+    <section class="feedback-section">
+      <h2>Feedback</h2>
+      <p>We value your feedback. Let us know your thoughts:</p>
+      <textarea placeholder="Write your feedback here..." ng-model="feedback"></textarea>
+      <button class="feedback-button" ng-click="submitFeedback()">Submit Feedback</button>
+    </section>
+  </div>
+</body>
+

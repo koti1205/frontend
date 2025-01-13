@@ -1,0 +1,32 @@
+.input{
+    width: 250px;
+    height: 40px;
+    border: 2px solid #666;
+    border-radius: 10px;
+    margin: 25px 30px;
+    padding-left: 25px;
+    background-color: white;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.sub{
+    background-color: #f9f7f7;
+    border: 0px solid #666;
+    border-radius: 8px;
+    padding: 30px 10px;
+    margin: 20px;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    color: white;
+    background-color: rgb(38, 38, 254);
+    border: 2px solid rgb(38, 38, 254);
+    border-radius: 8px;
+    margin-left: 40px;
+}
+h1{
+    text-align: center;
+}

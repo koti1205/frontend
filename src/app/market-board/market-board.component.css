@@ -1,0 +1,78 @@
+body{
+    margin-top: 0px;
+}
+.content{
+    background-color:whitesmoke;
+    margin: 25px 150px;
+    padding:10px 20px;
+    border-radius: 10px;
+    transition:0.4s ease-in-out;
+}
+.headings{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 300;
+    background-color: rgb(252, 164, 64);
+    padding: 0px 10px;
+    border-radius: 10px;
+}
+.data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 50px;
+    font-size: 18px;
+    font-weight: 200px;
+    
+}
+h1{
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    padding-top: 12vh;
+}
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px 150px;
+    border-radius: 10px;
+    transition:0.4s ease-in-out;
+}
+.Inputs{
+    margin-left:19%;
+    transition:0.4s ease-in-out;
+}
+.inputs p{
+    display: inline;
+}
+.location{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+.location p{
+    padding-top: 50px;
+    margin-left: 20px;
+}
+input{
+    height: 40px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+.search{
+    width: 400px;
+}
+.location{
+    width: 200px;
+}
+.bi{
+    margin-left: 20px;
+    border: 1px solid black;
+    padding:13px 13px;
+    border-radius: 50%;
+}

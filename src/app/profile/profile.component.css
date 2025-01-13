@@ -1,0 +1,67 @@
+
+.main{
+    background-color:rgb(227, 227, 227);
+    padding: 20px 0px;
+    padding-top: 14vh;
+}
+.Main-next{
+    margin-left: 18%;
+}
+.Sub1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    margin: 0px 150px;
+    border-radius: 8px;
+}
+.Sub2{
+    background-color: white;
+    margin: 50px 150px;
+    border-radius: 8px;
+}
+.sub-1,.sub-2,.sub-3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 100px;
+    padding-right: 300px;
+}
+.subchild-1,.subchild-2,.subchild-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sub1,.sub2,.sub3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 50px;
+}
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-content: center;
+}
+
+p{
+    margin: 2px 8px;
+    font-size: large;
+    font-weight: 200;
+}
+.bi{
+    font-size: 25px;
+    color: rgb(136, 136, 136);
+}
+.bi-person-circle{
+    font-size: 60px;
+    color: silver;
+}
+
+.name{
+    padding-left: 10px;
+    padding-bottom: 3px;
+}

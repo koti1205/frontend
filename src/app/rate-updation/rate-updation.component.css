@@ -1,0 +1,84 @@
+.main{
+    display: flex;
+    background-color:whitesmoke;
+    margin: 10px 80px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 0.7rem;
+    
+}
+.buyer-updation{
+    padding-bottom: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+}
+p{
+    font-size: 25px;
+    padding-left: 40px;
+    font-weight: 300;
+}
+h3,h4{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 5px;
+}
+.sub-1,.sub-2{
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
+}
+.sub-1{
+    width: 200px;
+    height: 170px;
+    background-color: antiquewhite;
+}
+.sub-2 .btn{
+    margin-left: 40px;
+    margin-top: 30px;
+    width: 100px;
+    height: 40px;
+
+}
+.sub2,.sub1{
+    margin-left: 80px;
+}
+.sub-3{
+    display: block;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+.sub-3 .btn{
+    padding: 12px 30px;
+    margin-left: 35px;
+}
+.main-2{
+    display: block;
+}
+.btn{
+    border:  2px solid rgb(49, 49, 255);
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(49, 49, 255);
+}
+.add{
+    padding: 12px 30px;
+    border:  2px solid rgb(49, 49, 255);
+    border-radius: 8px;
+    color: white;
+    background-color: rgb(49, 49, 255);
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+.buttons{
+    float: right;
+    margin-top: 10px;
+    margin-right: 40px;
+}
+input{
+    padding: 8px 10px;
+    border-radius: 6px;
+    margin-left: 8px;
+}

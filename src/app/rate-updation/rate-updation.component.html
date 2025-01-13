@@ -1,0 +1,61 @@
+<div>
+    <h1>Product Rate Updation</h1>
+    <P>Buying Product Rate Updaton</P>
+    <div class="buyer-updation">
+        <div class="main">
+            <div class="sub-1">
+                <img class="img" src="" alt="img"/>
+            </div>
+            <div class="main-2">
+                <div class="sub-2">
+                    <div class="sub1">
+                        <h3>Product name</h3>
+                        <h4>cashew shell</h4>
+                    </div>
+                    <div class="sub2">
+                        <h3>Product price</h3>
+                        <span >{{B_productPrice}}</span>
+                        <input *ngIf="isActive" type="text" placeholder="Enter the price" [(ngModel)]="B_newPrice" />
+                    </div>
+                </div>
+                <div class="sub-3">
+                    <button class="btn" (click)="B_updatePrice()"> Update Rate</button>
+                    <button class="btn">Update Same Price</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="add">+Add More Products</button>
+            <button class="add">Submit</button>
+        </div>
+    </div>
+    <p>Seller Product Rate Upadation</p>
+    <div class="seller-updation">
+        <div class="main">
+            <div class="sub-1">
+                <img class="img" src="" alt="img"/>
+            </div>
+            <div class="main-2">
+                <div class="sub-2">
+                    <div class="sub1">
+                        <h3>Product name</h3>
+                        <h4>cashew shell</h4>
+                    </div>
+                    <div class="sub2">
+                        <h3>Product price</h3>
+                        <span >{{S_productPrice}}</span>
+                        <input *ngIf="isactive" type="text" placeholder="Enter the price" [(ngModel)]="S_newPrice" />
+                    </div>
+                </div>
+                <div class="sub-3">
+                    <button class="btn" (click)="S_updatePrice()"> Update Rate</button>
+                    <button class="btn">Update Same Price</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="add">+Add More Products</button>
+            <button class="add">>>skip</button>
+        </div>
+    </div>
+</div>

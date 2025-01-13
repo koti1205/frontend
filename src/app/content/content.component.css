@@ -1,0 +1,130 @@
+.main {
+    margin-left: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding-top: 13.5vh;
+    transition:0.5s ease-in-out;
+    z-index: -1;
+    background-color:whitesmoke;
+}
+.main-next{
+    margin-left:18%;
+    display: flex;
+    padding-top: 13.5vh;
+    transition:0.5s ease-in-out
+}
+.card{
+    width: 285px;
+    height: 420px; 
+    display: grid;
+    position: relative;
+    place-items: center;
+    /* border: 1px solid ; */
+    border-radius: 0.6rem;
+    margin: 0.5rem 0.3rem; 
+    background-color:white;
+}
+.d-update{
+    position: absolute;
+    padding: 3px 5px;
+    border-radius: 4px;
+    background-color:white;
+    right: -0.5rem;
+    bottom: 7.5rem;
+
+}
+.bi-eye-fill{
+    margin-left: 0.7rem;
+    font-size: 15px;
+}
+.img{
+    width: 240px;
+    height: 200px;
+    background-color:white ;
+    border-radius: 1.6rem;
+    top: 3px;
+    position: absolute;
+}
+h4,h3,h5,p{
+    margin: 5px 0px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-size: 21px;
+}
+h3{
+    margin-top: 205px;
+    font-weight: 550;
+}
+h4,h5{
+    font-weight: lighter;
+}
+button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.details{
+    display: grid;
+    place-items: center;
+}
+.update{
+    margin-left: 130px;
+}
+.seller-img{
+    width: 500px;
+    height: 300px;
+    background-color:rgb(235, 233, 233) ;
+    border-radius: 2rem;
+}
+.seller-view{
+    background-color: whitesmoke;
+    border: 2px snow silver;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+.seller-details{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.seller-button{
+    padding: 5px 50px;
+    background-color: orange;
+    color: white;
+    border: 2px solid orange;
+    margin-left: 36%;
+    margin-top: 20px;
+
+}
+h5{
+    text-align: end;margin-right: 10px;
+}
+@media(max-width:400px){
+    .main {
+        margin-left: 3%;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: medium;
+    }
+    .main-next{
+        margin-left:50%;
+        display: block;
+        font-size: medium;
+    }
+    .card{
+        width: 150px;
+        height: 240px;
+        margin: 0.7rem 0.3rem;
+    }
+    .img{
+        width: 140px;
+        height: 120px;
+    }
+    h3,h4,h5,p{
+        font-size: small;
+        margin: 2px 0px;
+    }
+}

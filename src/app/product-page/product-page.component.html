@@ -1,0 +1,39 @@
+<!-- <app-header></app-header>
+<app-navbar ></app-navbar>
+<app-popup></app-popup>  -->
+<body ng-controller="BuyerController">
+    <div class="container" [ngClass]="{'Container':toggleActive}">
+        <div class="card">
+            <div class="card-header">
+                <h2>Seller Details</h2>
+                <button ng-click="sendQuotation()">Send Quotation</button>
+            </div>
+
+            <div class="details">
+                <img ng-src="" alt="Product Image">
+
+                <div class="info">
+                    <p><span class="highlight">Product Name:</span>{{product.title}}</p>
+                    <p><span class="highlight">HSN Code:</span> hsnCod</p>
+                    <p><span class="highlight">Packaging Type:</span> packagingType</p>
+                    <p><span class="highlight">Min Order Quantity:</span> minOrderQuantity</p>
+                    <p><span class="highlight">Price:</span>{{product.price}}</p>
+                    <p><span class="highlight">Seller:</span> seller</p>
+                    <p><span class="highlight">Last Updated:</span> lastUpdated</p>
+                </div>
+            </div><hr>
+
+            <div class="contact">
+                <h3>Seller Contact Details</h3>
+                <h4>Company Name</h4>
+                <p><span class="highlight"><i class="bi bi-person"></i>Name of the Person </span></p>
+                <p><span class="highlight"><i class="bi bi-geo-alt"></i>Ground Floor, Plot No. 98, Chandrawali, Sector-1, imt Manesar, Sector-2 Manesar-122050,Gurugram, Haryana, india </span></p>
+                <a href="">Get Directions</a>
+                <p><span></span><i class="bi bi-telephone-outbound"></i>Call 08046039798</p>
+                <button><i class="bi bi-chat-left-dots"></i>Send SMS</button>
+                <button><i class="bi bi-envelope"></i>Send Email</button>
+            </div>
+
+            <p class="highlight">Looking for transportation between buyer and your location? <a href="#">Click here</a></p>
+        </div>
+    </div>

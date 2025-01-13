@@ -1,0 +1,36 @@
+<div class="nav" [ngClass]="{'active-class':toggleActive}">
+    <!-- class="fNames" [ngClass]="{'lu':toggleActive}" -->
+    <ul class="fNames" [ngClass]="{'lu':toggleActive}">
+        <div class="features" routerLink="/">
+            <i class="bi bi-house"></i><span >Home</span>
+        </div>
+        <div class="features" routerLink="/Market-Board">
+            <i class="bi bi-shop"></i><span >Market Board</span>
+        </div>
+        <div class="features"  [ngClass]="{'addon':toggleService && toggleActive}" (click)="addtoggle()">
+            <i class="bi bi-house-add"></i><span class="fNames" [ngClass]="{'lu':toggleActive,}" >Services</span>
+        </div>
+        <div class="additional" [ngClass]="{'lu':toggleActive,'dis':toggleService}" *ngIf="toggleActive">
+            <p class="sub">Quality Check</p>
+            <p class="sub">Payments</p>
+            <p class="sub">Insurence</p>
+        </div>
+        <div class="features" routerLink="/seller-tools">
+            <span class="material-symbols-outlined">sell
+                </span><span>Sellers Tools</span>
+        </div>
+        <div class="features" routerLink="/buy-registration" >
+            <span class="material-symbols-outlined">
+                rule_settings
+                </span><span>Buyers Tools</span>
+        </div>
+        <div class="features" routerLink="/Help-center">
+            <i class="bi bi-info-circle"></i><span >Help Center</span>
+        </div>
+        <div class="features">
+            <i class="bi bi-telephone"></i><span>Contact us</span>
+        </div>
+        
+    </ul>
+</div>
+

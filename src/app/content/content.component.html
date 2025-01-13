@@ -1,0 +1,72 @@
+
+<div class="main" [ngClass]="{'main-next':toggleActive}">
+    <ng-container *ngIf="!isNice && isBuyerView">
+        <div class="card"  *ngFor="let prod of productsData" (click)="onProductClick(prod.id)">
+            <div class="img">
+                <img src="" width="240" height="200" />
+            </div>
+            <h3>{{prod.title}}</h3>
+            <p>{{prod.price}} / kg<i class="bi bi-eye-fill" (mouseover)="isHovered=true" (mouseleave)="isHovered=false"></i></p>
+            <h5 [style.display]="isHovered ? 'block':'none' " class="d-update">updated 5 days ago</h5>
+            <div class="details">
+                <h4> ABC Company</h4>
+                <h5>Rajamundry</h5>
+            </div>
+            <button>contact suplier</button>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="isNice">
+        <div class="seller-view">
+            <div class="seller-img">
+                <img src=''/>
+            </div>
+            <div class="seller-details">
+                <div>
+                    <h3>product name</h3>
+                    <p>product name<p>
+                </div>
+                <div>
+                    <h4> product price</h4>
+                    <p>price / kg</p>
+                </div>
+            </div>
+            <button class="seller-button" routerLink="/seller-tools">Update</button>
+            <h5 >updated 5 days ago</h5>
+        </div>
+        <div class="seller-view">
+            <div class="seller-img">
+                <img src=''/>
+            </div>
+            <div class="seller-details">
+                <div>
+                    <h3>product name</h3>
+                    <p>product name<p>
+                </div>
+                <div>
+                    <h4> product price</h4>
+                    <p>price / kg</p>
+                </div>
+            </div>
+            <button class="seller-button">Update</button>
+            <h5 >updated 5 days ago</h5>
+        </div>    
+        <div class="seller-view">
+            <div class="seller-img">
+                <img src=''/>
+            </div>
+            <div class="seller-details">
+                <div>
+                    <h3>product name</h3>
+                    <p>product name<p>
+                </div>
+                <div>
+                    <h4> product price</h4>
+                    <p>price / kg</p>
+                </div>
+            </div>
+            <button class="seller-button">Update</button>
+            <h5 >updated 5 days ago</h5>
+        </div>        
+    </ng-container>
+ </div>
+    

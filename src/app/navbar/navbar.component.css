@@ -1,0 +1,137 @@
+body{
+    left:0px;
+}
+ul{
+    list-style-type: none;
+    padding-left:7%;
+    padding-right: 10px;
+    padding-top: 0px;
+    text-transform: capitalize;
+}
+#icon{
+    padding-left: 13px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+}
+
+.features{
+    height: 45px;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 25px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    color: black;
+    font-family:Arial, Helvetica, sans-serif;
+    /* transition:1.7s ease-in-out */
+}
+.features:hover{
+    background-color: white;
+    color: rgb(74, 74, 74);
+}
+.addon{
+    height: 45px;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    color:black;
+}
+.nav{
+    margin-top: 11vh;
+    width: 0%;
+    height: 89vh;
+    position: fixed; 
+    background-color:#df7d0d;
+    color: black;
+    border-radius: 2px;
+    transition:0.4s ease-in-out;
+    z-index: 1;
+}
+.active-class{
+    margin-top: 12vh;
+    height: 89vh;
+    width: 18%; 
+    position:fixed;
+    background-color: #fb8c11;
+    z-index: 1;
+    transition:0.4s ease-in-out;
+}
+.fNames{
+    transform: translateX(-200px);
+}
+.lu{
+    display: grid;
+    padding-right: 25px;
+    transform: translateX(0px);
+    transition:0.4s ease-in-out
+}
+.additional{
+    background-color: #fb8c11 ;
+    display:none;
+}
+.dis{
+    display: block;
+    margin-top: 0px;
+    margin-left: 40px;
+    font-size: large;
+    transition:0.4s ease-in-out;
+}
+.sub{
+    padding: 10px 10px;
+    border-radius: 6px;
+    margin: 3px 0px;
+}
+.sub:hover{
+    background-color: white;
+    color: rgb(74, 74, 74);
+}
+.bi,.material-symbols-outlined{
+    margin-right: 12px;
+    margin-left: 5px;
+    color: black;
+}
+@media(max-width:400px){
+    .nav{
+        width: 0%;
+        height: 85vh;
+        margin-top: 11vh;
+        position: fixed; 
+        background-color:#df7d0d;
+        color: white;
+        border-radius: 2px;
+    }
+    .active-class{
+        width: 50%;
+        height: 87vh;
+        margin-top: 13vh;
+        position:fixed;
+        background-color: #fb8c11;
+        z-index: 1;
+    }
+    span,i{
+        font-size: 15px;;
+    }
+    .features{
+        margin-bottom: 5px;
+    }
+    .additional{
+        font-size: 15px;
+        margin-top: 3px;
+        color: black;
+    }
+    .sub{
+        padding: 4px 10px;
+    }
+    ul{
+        padding-top: 10px;
+    }
+    .bi,.material-symbols-outlined{
+        margin-right: 6px;
+        margin-left: 5px;
+        color: black;
+    }
+}

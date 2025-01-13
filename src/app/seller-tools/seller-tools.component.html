@@ -1,0 +1,103 @@
+<!-- <app-header></app-header>
+<app-navbar></app-navbar>
+<app-popup></app-popup> -->
+<h1>Selling Product Registration</h1>
+<div class="main" [ngClass]="{'Main-next':toggleActive}">
+    <div class="sub" >
+        <div class="imgs">
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+        </div>
+        <div class="upload-container">
+            <label for="imageUpload">
+              <div class="upload-box">
+                <i id="bi" class="bi bi-camera-fill"><p>Add Photo</p></i>
+                <!-- <img src="camera-icon.png" alt="Add Photo" class="upload-icon" /> -->
+              </div>
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" style="display: none" />
+            <div class="file">
+                <input  type="file" placeholder="add any required quality pdf"/>
+            </div>
+        </div>
+        <div class="sub1" >
+            <div class="details">
+                <div class="org">
+                    <i class="bi bi-pencil-fill" (click)="onchange_name()"></i> <span [style.display]="name ? 'none':'block' ">product name</span>
+                    <input [style.display]="name ? 'block':'none' " class="input"  type="text"  placeholder="Product name"/>
+                </div>
+                <div class="org">
+                    <i class="bi bi-pencil-fill" (click)="onchange_discription()"></i><span [style.display]="discription ? 'none':'block' ">product discription</span>
+                    <input  [style.display]="discription ? 'block':'none' " class="Description" type="text" placeholder="Product Description" />
+                </div>
+            </div>
+            <div class="details">
+                <div class="org">
+                    <i class="bi bi-pencil-fill" (click)="onchange_price()"></i><span  [style.display]="price ? 'none':'block' " >product price</span>
+                    <input  [style.display]="price ? 'block':'none' " class="input" type="text" placeholder="Target Price" />
+                </div>
+                <div  class="org">
+                    <i class="bi bi-pencil-fill"></i>
+                    <span>product category</span>
+                    <!-- <input class="input" type="text" placeholder="Product Category" />-->
+                </div>  
+            </div>
+            <div class="details">
+                <div class="org">
+                    <i class="bi bi-pencil-fill"></i><span>product units</span>
+                    <!-- <input class="input"  type="text" placeholder="Units" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub2">
+            <button>Submit</button>
+    </div>
+</div>
+<button class="btn" (click)="addproduct()" [style.display]="addproducts ? 'none':'block' ">+Add more</button>
+
+<div class="main" [ngClass]="{'Main-next':toggleActive}" [style.display]="addproducts ? 'block':'none' ">
+    <div class="sub" *ngFor="let product of products let i=index">
+        <div class="imgs">
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+        </div>
+        <div class="upload-container">
+            <label for="imageUpload">
+              <div class="upload-box">
+                <i id="bi" class="bi bi-camera-fill"><p>Add Photo</p></i>
+                <!-- <img src="camera-icon.png" alt="Add Photo" class="upload-icon" /> -->
+              </div>
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" style="display: none" />
+            <div class="file">
+                <input  type="file" placeholder="add any required quality pdf"/>
+            </div>
+        </div>
+        <div class="sub1" >
+                <input class="input" [(ngModel)]="product.name" name="name{{i}}" type="text"  placeholder="Product name"/>
+                <input class="Description" [(ngModel)]="product.description" name="description{{i}}" type="text" placeholder="Product Description" /><br>
+                <input class="input" [(ngModel)]="product.category" name="category{{i}}" type="text" placeholder="Product Category" />
+                <input class="input" [(ngModel)]="product.targetprice" name="targetprice{{i}}" type="text" placeholder="Target Price" />
+                <input class="input" [(ngModel)]="product.units" name="units{{i}}" type="text" placeholder="Units" />
+        </div>
+    </div>
+    <div class="sub2">
+            <button (click)="addProduct()">Add More</button>
+            <button>Submit</button>
+    </div>
+</div>
+
+
+
+        
+
+        

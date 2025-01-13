@@ -1,0 +1,51 @@
+<div *ngIf="isPopupVisible && name === '' " class="popup-overlay" >
+    <div class="popup-content" (click)="$event.stopPropagation()">
+        <button class="close" (click)="hidePopup()">close</button>
+        <h1>Artha</h1>
+        <div class="test"><img src=""  alt="img"/></div>
+        <h3>Sign in or create an account</h3>
+        <P>hfin oirhinvb kur boirnv ourlnv oirlvi oirlnvv oirlnr oirlnb</P>
+        <div class="btn-div">
+            <button class="btn" (click)="SignIn()">Sign in</button>
+            <button class="btn" routerLink="/SignUp">Create an Account</button>
+            <p>{{name}}</p>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="isClicked || name === null " class="popup-overlay">
+    <div class="popup-content" (click)="$event.stopPropagation()">
+        <button class="close" (click)="hidePopup(); SignIn()">close</button>
+        <h1>Artha</h1>
+        <div class="test"><img src=""  alt="img"/></div>
+          <h3>SignIn</h3>
+          <P>hfin oirhinvb kur boirnv ourlnv oirlvi oirlnvv oirlnr oirlnb</P>
+        <div class="inputs">
+            <i class="bi bi-person-fill"></i>
+            <input class="input" type="text" placeholder="Phone number/Email" />
+        </div>
+        <div class="inputs">
+            <i class="bi bi-lock-fill"></i>
+            <input class="input" type="password" placeholder="password" />
+        </div>
+        <div class="btn-div">
+            <button class="btn" >Sign in</button>
+        </div>
+
+    </div>
+
+</div>
+<div class="POPUP" *ngIf="isPopupVisible && name !== ''" >
+    <i class="bi bi-x-circle close" (click)="hidePopup()"></i>
+    <h3 class="name">Hey! Koti</h3><hr>
+    <ul>
+        <li routerLink="/profile"><i class="bi bi-person-check"></i>Profile</li>
+        <li><i class="bi bi-gear"></i>Settings</li>
+        <li><i class="bi bi-file-earmark-arrow-up"></i>post your reqirement</li>
+        <li><i class="bi bi-card-text"></i>Inquiries</li>
+    </ul><hr>
+    <h3 class="transport">Ship with Artha</h3>
+    <h4 class="Transport">Easy Booking of Transport</h4>
+    <hr>
+    <button class="signout-btn"><i class="bi bi-power"></i>sign out</button>
+</div>

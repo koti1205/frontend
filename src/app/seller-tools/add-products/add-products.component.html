@@ -1,0 +1,42 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<app-popup></app-popup>
+<h1>Selling Product Registration</h1>
+<i class="bi bi-arrow" routerLink="/seller-tools" >back</i>
+<div class="main" [ngClass]="{'Main-next':toggleActive}">
+    <div class="sub" *ngFor="let product of products let i=index">
+        <div class="imgs">
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+            <i id="photos" class="bi bi-camera-fill"></i>
+        </div>
+        <div class="upload-container">
+            <label for="imageUpload">
+              <div class="upload-box">
+                <i id="bi" class="bi bi-camera-fill"><p>Add Photo</p></i>
+                <!-- <img src="camera-icon.png" alt="Add Photo" class="upload-icon" /> -->
+              </div>
+            </label>
+            <input type="file" id="imageUpload" accept="image/*" style="display: none" />
+            <div class="file">
+                <input  type="file" placeholder="add any required quality pdf"/>
+            </div>
+        </div>
+        <div class="sub1" >
+                <input class="input" [(ngModel)]="product.name" name="name{{i}}" type="text"  placeholder="Product name"/>
+                <input class="Description" [(ngModel)]="product.description" name="description{{i}}" type="text" placeholder="Product Description" />
+                <input class="input" [(ngModel)]="product.category" name="category{{i}}" type="text" placeholder="Product Category" />
+                <input class="input" [(ngModel)]="product.targetprice" name="targetprice{{i}}" type="text" placeholder="Target Price" />
+                <input class="input" [(ngModel)]="product.units" name="units{{i}}" type="text" placeholder="Units" />
+        </div>
+    </div>
+    <div class="sub2">
+            <button (click)="addProduct()">Add More</button>
+            <button>Submit</button>
+    </div>
+</div>
+
+
