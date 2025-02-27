@@ -26,7 +26,9 @@ import { SellerToolsComponent } from './seller-tools/seller-tools.component';
 import { RateUpdationComponent } from './rate-updation/rate-updation.component';
 import { provideHttpClient } from '@angular/common/http';
 import { AddProductsComponent } from './seller-tools/add-products/add-products.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { StoreComponent } from './store/store.component';
 
 const routes:Routes=[
   {
@@ -55,6 +57,15 @@ const routes:Routes=[
   },
   {
     path:'seller-tools', component:SellerToolsComponent
+  },
+  {
+    path:'store', component:StoreComponent
+  },
+  {
+    path:'rate-updation', component:RateUpdationComponent
+  },
+  {
+    path:'company-registration', component:CompanyRegistrationComponent
   }
 ]
 @NgModule({
@@ -78,6 +89,7 @@ const routes:Routes=[
     SellerToolsComponent,
     RateUpdationComponent,
     AddProductsComponent,
+    StoreComponent,
 
   ],
   imports: [
@@ -87,6 +99,8 @@ const routes:Routes=[
     MatTabsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     provideHttpClient(),

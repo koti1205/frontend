@@ -5,16 +5,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
-  isBuyerView:boolean=true;
-
-  ngOnInit(): void {
-    this.showBuyerView();
-  }
-
-  showBuyerView(){
-    this.isBuyerView=true;
-  }
- 
+export class HomeComponent {
+  
   
 }

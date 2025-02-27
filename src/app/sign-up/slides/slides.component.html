@@ -1,50 +1,86 @@
-<!-- <mat-tab-group>
-    <mat-tab label="First"> Content 1
-        <div class="inputs">
-            <i class="bi bi-person-fill"></i>
-            <input class="input" type="text" placeholder="Username" />
-            <i class="bi bi-person-fill"></i>
-            <input id="adj" class="input" type="text" placeholder="Surname" />
+<!-- <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="main">
+        <div class="logo">
+            <h1>ARTHA</h1>
+            <img src="" alt="logo" width="200px" height="200px" />
         </div>
-        <div id="aus" class="inputs">
-            <div>
-                <i class="bi bi-telephone-fill"></i>
-                <input id="uni" class="input" type="text" placeholder="Phone Number" />
-                <button *ngIf="numOtp" class="Signup-btn" id="" (click)="isNumActive()">Get OTP</button><br>
-                <a  *ngIf="!numOtp" id="btn" >resend OTP</a>
-            </div>
-            <div>
-                <span *ngIf="!numOtp"><i class="bi bi-shield-lock-fill"></i><input  id="otpverify" class="input" type="text" placeholder="Enter OTP"  /></span><br>
-                <a  *ngIf="!numOtp" id="btn">verify OTP</a>
-            </div>
-        </div>
-        
-        <div id="aus" class="inputs">
-            <div>
-                <i class="bi bi-envelope-fill"></i>
-                <input id="uni" class="input" type="email" placeholder="Email" />
-                <button *ngIf="emailOtp" class="Signup-btn" id="" (click)="isEmailactive()">Get OTP</button><br>
-                <a  *ngIf="!emailOtp" id="btn" >resend OTP</a>
-            </div>
-            <div>
-                <span *ngIf="!emailOtp"><i class="bi bi-shield-lock-fill"></i><input  id="otpverify" class="input" type="text" placeholder="Enter OTP"  /></span><br>
-                <a  *ngIf="!emailOtp" id="btn">verify OTP</a>
-            </div>
-        </div>
-        <div class="inputs">
-            <i class="bi bi-lock-fill"></i>
-            <input class="input" type="password" placeholder=" Password" />
-            <i class="bi bi-lock-fill"></i>
-            <input id="adj" class="input" type="password" placeholder="Re-enter Password" />
-        </div>
-        <div class="cbox">
-            <h3 class="reg-heading">Register As:</h3>
-            <input class="checkbox" type="checkbox" placeholder="buyer" />
-            <span>BUYER</span>
-            <input class="checkbox" type="checkbox" placeholder="seller"/>
-            <span>SELLER</span>
-        </div> 
-         <button class="Signup-btn">Signup</button>    
-    </mat-tab>
-    <mat-tab label="Second"> Content 2 </mat-tab>
-</mat-tab-group> -->
+            <div class="signin">
+            <mat-tab label="Company">
+                <div class="login">
+                    <h1 class="titleb">Signup</h1>
+                    <div class="inputs">
+                        <div>
+                            <i class="bi bi-person-fill"></i>
+                            <input class="input" type="text" formControlName="firstname" placeholder="firstname" />
+                            <div *ngIf="signupForm.get('firstname')?.invalid && signupForm.get('firstname')?.touched" class="error">
+                              <small *ngIf="signupForm.get('firstname')?.hasError('required')">username is required</small> 
+                              <small *ngIf="signupForm.get('firstname')?.hasError('pattern')">only letters are allowed</small>
+                            </div>
+                        </div>
+                        <div>
+                            <i class="bi bi-person-fill"></i>
+                            <input id="adj" class="input" type="text" formControlName="lastname" placeholder="lastname" />
+                            <div *ngIf="signupForm.get('lastname')?.invalid && signupForm.get('lastname')?.touched" class="error">
+                               <small *ngIf="signupForm.get('lastname')?.hasError('required')">surname is required</small> 
+                               <small *ngIf="signupForm.get('lastname')?.hasError('pattern')">only letters are allowed</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="aus" class="inputs">
+                        <div>
+                            <i class="bi bi-telephone-fill"></i>
+                            <input id="uni" class="input" type="text" formControlName="phoneNumber" placeholder="Phone Number" />
+                            <button *ngIf="numOtp" class="Signup-btn" (click)="isNumActive()">Get OTP</button><br>
+                            <a  *ngIf="!numOtp" id="btn" >resend OTP</a>
+                            <div *ngIf="signupForm.get('phoneNumber')?.invalid && signupForm.get('phoneNumber')?.touched" class="error">
+                                <small *ngIf="signupForm.get('phoneNumber')?.hasError('required')">phoneNumber is required</small> 
+                                <small *ngIf="signupForm.get('phoneNumber')?.hasError('pattern')">only Numbers are allowed</small>
+                            </div>
+                        </div>
+                        <div *ngIf="!numOtp">
+                            <span ><i class="bi bi-shield-lock-fill"></i><input  id="otpverify" class="input" type="text" placeholder="Enter OTP"  /></span><br>
+                            <a  id="btn">verify OTP</a>
+                        </div>
+                    </div>
+                    
+                    <div id="aus" class="inputs">
+                        <div>
+                            <i class="bi bi-envelope-fill"></i>
+                            <input id="uni" class="input" type="email" formControlName="email" placeholder="Email" />
+                            <button *ngIf="emailOtp" class="Signup-btn" id="" (click)="isEmailactive()">Get OTP</button><br>
+                            <a  *ngIf="!emailOtp" id="btn" >resend OTP</a>
+                            <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error">
+                                <small *ngIf="signupForm.get('email')?.hasError('required')">Email is required</small> 
+                                <small *ngIf="signupForm.get('email')?.hasError('email')">must be a valid email</small>
+                            </div>
+                        </div>
+                        <div>
+                            <span *ngIf="!emailOtp"><i class="bi bi-shield-lock-fill"></i><input  id="otpverify" class="input" type="text" placeholder="Enter OTP"  /></span><br>
+                            <a  *ngIf="!emailOtp" id="btn">verify OTP</a>
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        <div> 
+                            <i class="bi bi-lock-fill"></i>
+                            <input class="input" type="password" formControlName="password" placeholder=" Password" />
+                            <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="error">password must be 8 charecters and with the special charecters </div>
+                        </div>
+                        <div>
+                            <i class="bi bi-lock-fill"></i>
+                            <input id="adj" class="input" type="password" formControlName="confirmPassword" placeholder="Re-enter Password" />
+                            <div *ngIf="signupForm.hasError('mismatch') && signupForm.get('confirmPassword')?.touched" class="error">passwords not matched!</div>
+                        </div>
+                    </div>
+                    <div class="cbox">
+                        <h3 class="reg-heading">Register As:</h3>
+                        <input class="checkbox" type="checkbox" placeholder="buyer" />
+                        <span>BUYER</span>
+                        <input class="checkbox" type="checkbox" placeholder="seller"/>
+                        <span>SELLER</span>
+                    </div> 
+                     <button class="Signup-btn">Signup</button> 
+                </div>
+            </mat-tab>   
+    </div>
+</div>
+</form> -->

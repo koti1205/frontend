@@ -1,25 +1,22 @@
-<div *ngIf="isPopupVisible && name === '' " class="popup-overlay" >
+<!-- <div *ngIf="isPopupVisible && name === '' " class="popup-overlay" >
     <div class="popup-content" (click)="$event.stopPropagation()">
-        <button class="close" (click)="hidePopup()">close</button>
+        <i class="bi bi-x-lg close"  (click)="hidePopup()"></i>
         <h1>Artha</h1>
         <div class="test"><img src=""  alt="img"/></div>
         <h3>Sign in or create an account</h3>
         <P>hfin oirhinvb kur boirnv ourlnv oirlvi oirlnvv oirlnr oirlnb</P>
         <div class="btn-div">
             <button class="btn" (click)="SignIn()">Sign in</button>
-            <button class="btn" routerLink="/SignUp">Create an Account</button>
+            
             <p>{{name}}</p>
         </div>
     </div>
 
-</div>
-<div *ngIf="isClicked || name === null " class="popup-overlay">
+</div> -->
+<div *ngIf="isPopupVisible && name === '' " class="popup-overlay">
     <div class="popup-content" (click)="$event.stopPropagation()">
-        <button class="close" (click)="hidePopup(); SignIn()">close</button>
-        <h1>Artha</h1>
-        <div class="test"><img src=""  alt="img"/></div>
-          <h3>SignIn</h3>
-          <P>hfin oirhinvb kur boirnv ourlnv oirlvi oirlnvv oirlnr oirlnb</P>
+        <i class="bi bi-x-lg close"  (click)="hidePopup()"></i>
+        <h1>artha</h1>
         <div class="inputs">
             <i class="bi bi-person-fill"></i>
             <input class="input" type="text" placeholder="Phone number/Email" />
@@ -30,6 +27,8 @@
         </div>
         <div class="btn-div">
             <button class="btn" >Sign in</button>
+            <span>------or------</span>
+            <button class="btn" routerLink="/SignUp" (click)="hidePopup()">Create an Account</button>
         </div>
 
     </div>

@@ -8,12 +8,17 @@
     z-index: 1;
 }
 .title{
-    font-family: 'PlayfairDispaly';
+    font-family: "Madimi One", serif;
+    font-weight: 400;
+    font-style: normal;;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .title h1{
+    font-family: "Madimi One", serif;
+    font-weight: 400;
+    font-style: normal;
     pointer-events: none;
 }
 .search{
@@ -27,8 +32,22 @@
 }
 
 #bi{
-    font-size: 30px;
-    padding-right:15px ;
+    font-size: 28px;
+    padding-right:45px ;
+    margin-bottom: 0px;
+}
+.text{
+    margin-top: 14px;
+}
+.text i{
+    margin-left: 15px;
+}
+.text p{
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    margin-right: 6px;
 }
 .name{
     margin-right: 25px;
@@ -51,7 +70,9 @@
   .togglename p{
     margin-top:5px;
     font-size: large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
     font-style: normal;
     padding-left: 6px;
   }

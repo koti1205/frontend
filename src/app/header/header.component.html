@@ -1,7 +1,7 @@
 <div class="header">
     <div class="title">
       <a><i id="bi" class="bi bi-list" (click)="onToggle()"></i></a>
-      <h1>Artha</h1>
+      <h1>artha</h1>
       <div class="search">
         <app-search-bar class="search"></app-search-bar>
       </div>
@@ -12,12 +12,17 @@
       </div>
     </div>
     <div class="acc" *ngIf="name === null || name ===''">
-      <a><i id="bi" class="bi bi-bell-fill"></i></a>
+      <div class="text">
+        <a><i id="bi" class="bi bi-shop" routerLink="store"></i></a>
+        <p>Virtual shops</p>
+      </div>
+      <a><i id="bi" class="bi bi-bell"></i></a>
       <a><i id="bi" class="bi bi-person-circle" (click)="showPopUp()"></i></a>
     </div>
     <div class="acc" *ngIf="name !== null && name !==''">
+      <a><i id="bi" class="bi bi-shop"></i></a>
       <a><i id="bi" class="bi bi-person-circle" (click)="showPopUp()" (mouseover)="isnice=true" (mouseleave)="isnice=false"></i></a><br>
       <p class="name">{{name}}</p>
-      <a><i id="bi" class="bi bi-bell-fill"></i></a>
+      <a><i id="bi" class="bi bi-bell"></i></a>
     </div>
 </div>
