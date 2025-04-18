@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {  Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
 import { SharedService } from '../shared.service';
 import { Router } from '@angular/router';
 

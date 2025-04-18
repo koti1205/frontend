@@ -1,0 +1,90 @@
+<div class="search-results-container">
+    <!-- Filters Section -->
+    <div class="filters">
+      <h3>Filters</h3>
+      <div class="filter-group">
+        <label for="category"> Related Category:</label>
+        <select id="category" [(ngModel)]="filters.category" (change)="onFilterChange()">
+          <option value="">All</option>
+          <option value="Category A">Category A</option>
+          <option value="Category B">Category B</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="priceRange">Price Range:</label>
+        <select id="priceRange" [(ngModel)]="filters.priceRange" (change)="onFilterChange()">
+          <option value="">All</option>
+          <option value="0-100">0 - 100</option>
+          <option value="101-200">101 - 200</option>
+          <option value="201-300">201 - 300</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>Business Type:</label>
+        <div class="type">
+          <input
+            type="checkbox"
+            id="manufacturer"
+            [(ngModel)]="filters.businessTypes.manufacturer"
+            (change)="onFilterChange()"
+          />
+          <label for="manufacturer">Manufacturer</label>
+        </div>
+        <div class="type">
+          <input
+            type="checkbox"
+            id="exporter"
+            [(ngModel)]="filters.businessTypes.exporter"
+            (change)="onFilterChange()"
+          />
+          <label for="exporter">Exporter</label>
+        </div>
+        <div class="type">
+          <input type="checkbox" id="wholesaler"
+            [(ngModel)]="filters.businessTypes.wholesaler"
+            (change)="onFilterChange()"
+          />
+          <label for="wholesaler">Wholesaler</label>
+        </div>
+        <div class="type">
+          <input
+            type="checkbox"
+            id="retailer"
+            [(ngModel)]="filters.businessTypes.retailer"
+            (change)="onFilterChange()"
+          />
+          <label for="retailer">Retailer</label>
+        </div>
+      </div>
+    </div>
+    
+  
+    <!-- Results Section -->
+    <div class="results">
+      <!-- <h3>Results for "{{ searchQuery }}"</h3>
+      <div *ngIf="filteredResults.length === 0">
+        <p>No results found.</p>
+      </div>
+      <div *ngFor="let item of filteredResults" class="result-item">
+        <h4>{{ item.title }}</h4>
+        <p>Category: {{ item.category }}</p>
+        <p>Price: {{ item.price }}</p>
+      </div> -->
+      <ng-container>
+        <div class="card"  *ngFor="let item of filteredResults">
+            <div class="img">
+                <img src="assets/images/default-product-image.jpg" loading="lazy" width="240" height="200" />
+            </div>
+            <h3>{{item.title}}</h3>
+            <p>{{item.price}} / kg<i class="bi bi-eye-fill" (mouseover)="isHovered=true" (mouseleave)="isHovered=false"></i></p>
+            <h5 [style.display]="isHovered ? 'block':'none' " class="d-update">updated 5 days ago</h5>
+            <div class="details">
+                <h4> ABC Company</h4>
+                <h5>Rajamundry</h5>
+            </div>
+            <button>contact suplier</button>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

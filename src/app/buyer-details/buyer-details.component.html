@@ -1,0 +1,17 @@
+<div class="main">
+    <ng-container >
+        <div class="card"  *ngFor="let prod of productsData">
+            <div class="img">
+                <img src="assets/images/default-product-image.jpg" loading="lazy" width="240" height="200" />
+            </div>
+            <h3>Buyer name</h3>
+            <p>{{prod.price}} / kg</p>
+            <h5>updated 5 days ago</h5>
+            <div class="details">
+                <h4> ABC Company</h4>
+                <h5>Rajamundry</h5>
+            </div>
+            <button>contact Buyer</button>
+        </div>
+    </ng-container>
+</div>

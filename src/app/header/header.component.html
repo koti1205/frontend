@@ -1,28 +1,56 @@
-<div class="header">
+<div class="Header">
+  <div class="header">
     <div class="title">
-      <a><i id="bi" class="bi bi-list" (click)="onToggle()"></i></a>
       <h1>artha</h1>
+      <div class="location-container">
+        <!-- <span class="location-text">location</span> -->
+        <span class="location-value">ALL OVER INDIA</span>
+        <i class="bi bi-geo-alt"></i>
+     </div>    
       <div class="search">
         <app-search-bar class="search"></app-search-bar>
+      </div>
+    </div>
+    <div class="acc" *ngIf="name === null || name ===''">
+      <div class="text">
+        <a><i id="bi" class="bi bi-shop" routerLink="store"></i></a>
+        <p>shops</p>
+      </div>
+      <a><i id="bi" class="bi bi-person-circle" (click)="showPopUp()"></i></a>
+    </div>
+    <div class="acc" *ngIf="name !== null && name !==''">
+      <div  class="text">
+        <a><i id="bi" class="bi bi-shop" routerLink="store"></i></a>
+        <p>Shops</p>
+      </div>
+      <div class="text">
+        <a><i id="bi" class="bi bi-person-circle" (click)="showPopUp()" (mouseover)="isnice=true" (mouseleave)="isnice=false"></i></a>
+        <p>{{name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="header1">
+      <div class="Sec-nav">
+        <a><i  class="bi bi-list" (click)="onToggle()"></i></a>
+        <div class="container">
+           <div class="box">Electronics</div>
+           <div class="box">Mechinery</div>
+           <div class="box">Pharmaceuticals</div>
+           <div class="box">Garments</div>
+           <div class="box">Home Supplies</div>
+           <div class="box">Parts & Spares</div>
+        </div>    
       </div>
       <div class="toggle-switch" >
         <input type="checkbox" id="toggle" [(ngModel)]="isChecked" (change)="onToggleChange()" />
         <label for="toggle" (click)="toggle()"></label>
         <div class="togglename"><p *ngIf="istoggle">Seller view</p><p *ngIf="!istoggle">Buyer view</p></div>
       </div>
-    </div>
-    <div class="acc" *ngIf="name === null || name ===''">
-      <div class="text">
-        <a><i id="bi" class="bi bi-shop" routerLink="store"></i></a>
-        <p>Virtual shops</p>
+      <div class="mini-header">
+        <i id="bi" class="bi bi-graph-up-arrow"></i>
+       <a><i id="bi" class="bi bi-bell"></i></a>
       </div>
-      <a><i id="bi" class="bi bi-bell"></i></a>
-      <a><i id="bi" class="bi bi-person-circle" (click)="showPopUp()"></i></a>
-    </div>
-    <div class="acc" *ngIf="name !== null && name !==''">
-      <a><i id="bi" class="bi bi-shop"></i></a>
-      <a><i id="bi" class="bi bi-person-circle" (click)="showPopUp()" (mouseover)="isnice=true" (mouseleave)="isnice=false"></i></a><br>
-      <p class="name">{{name}}</p>
-      <a><i id="bi" class="bi bi-bell"></i></a>
-    </div>
+  </div>
+
+
 </div>

@@ -20,6 +20,9 @@ export class NavbarComponent {
   onToggle(){
     this.sharedService.toggleActiveMethod();
   }
+  closetoggle(){
+    this.sharedService.toggleInActiveMethod();
+  }
   addtoggle(){
       this.toggleService=!this.toggleService
 

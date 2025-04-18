@@ -1,78 +1,168 @@
-body{
-    margin-top: 0px;
+.main{
+    padding-top: 21vh;
 }
-.content{
-    background-color:whitesmoke;
-    margin: 25px 150px;
-    padding:10px 20px;
-    border-radius: 10px;
-    transition:0.4s ease-in-out;
-}
-.headings{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25px;
-    font-weight: 300;
-    background-color: rgb(252, 164, 64);
-    padding: 0px 10px;
-    border-radius: 10px;
-}
-.data{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 50px;
-    font-size: 18px;
-    font-weight: 200px;
-    
-}
-h1{
+h1 {
     text-align: center;
-    font-family:'Times New Roman', Times, serif;
-    margin-bottom: 50px;
-    margin-top: 0px;
-    padding-top: 12vh;
+    font-size: 30px;
+    color: #333;
+    margin: 20px 0;
+    font-family:'Roboto', sans-serif;
 }
-.inputs{
+.header{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin: 5px 150px;
-    border-radius: 10px;
+    margin: 0rem 1rem;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
     transition:0.4s ease-in-out;
 }
+
+.inputs div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.search {
+    width: 30rem;
+    padding: 12px 40px 12px 20px;
+    margin-left: 2rem;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 25px; 
+    outline: none;
+    max-width: 350px; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.search:focus {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 5px rgba(72, 155, 87, 0.5);
+    transition:0.4s ease-in-out;
+}
+
+#search {
+    margin-left: 15px;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+}
+#search:hover {
+    color: #4CAF50; 
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-left: 3rem;
+}
+
+.location input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 180px;
+    margin-right: 10px;
+}
+
+.bi-geo-alt-fill {
+    font-size: 20px;
+    cursor: pointer;
+    color: #4CAF50;
+}
+
+.location p {
+    font-size: 16px;
+    color: #4CAF50;
+    margin: 0;
+    cursor: pointer;
+}
+
+ .content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:0.4s ease-in-out;
+} 
 .Inputs{
     margin-left:19%;
     transition:0.4s ease-in-out;
 }
-.inputs p{
-    display: inline;
+
+.headings {
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 3rem;
+    background-color: #D0F5F8;
+    font-family:'Roboto', sans-serif
 }
-.location{
-   display: flex;
-   flex-direction: row;
-   align-items: center;
+
+.headings p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2C3E50; 
 }
-.location p{
-    padding-top: 50px;
-    margin-left: 20px;
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-family:'Roboto', sans-serif
 }
-input{
-    height: 40px;
-    border-radius: 10px;
-    padding-left: 20px;
+.details img{
+    width: 220px;
+    height: 200px;
+    background-color: silver;
 }
-.search{
-    width: 400px;
+.avg{
+    margin-right: 4rem;
 }
-.location{
-    width: 200px;
+.data p {
+    font-size: 16px;
+    color: #212121;
+    font-weight: 900px;
 }
-.bi{
-    margin-left: 20px;
-    border: 1px solid black;
-    padding:13px 13px;
-    border-radius: 50%;
+.info{
+    font-weight: 400px;
+    color: rgb(114, 114, 114);
 }
+.data p:hover {
+    color: #040404;
+}
+.location p:hover {
+    color: #388E3C;
+}
+
+/* Responsive design adjustments */
+
+@media (max-width: 768px) {
+    .inputs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search, .location input {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .headings p {
+        font-size: 16px;
+    }
+
+    .data p {
+        font-size: 14px;
+    }
+}
+  
+  
+  

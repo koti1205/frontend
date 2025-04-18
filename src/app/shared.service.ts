@@ -9,7 +9,7 @@ export class SharedService {
   private toggleActive=new BehaviorSubject<boolean>(false);
   private isNice=new BehaviorSubject<boolean>(false)
   
-  Username:string='';
+  Username:string='koti';
   toggleActive$=this.toggleActive.asObservable();
   isNice$=this.isNice.asObservable();
  
@@ -17,7 +17,11 @@ export class SharedService {
     this.isNice.next(!this.isNice.value);
   } 
   toggleActiveMethod(){
-    this.toggleActive.next(!this.toggleActive.value);
+    // this.toggleActive.next(!this.toggleActive.value);
+    this.toggleActive.next(true);
+  }
+  toggleInActiveMethod(){
+    this.toggleActive.next(false);
   }
 
   private isPopupVisible =new BehaviorSubject<boolean>(false);

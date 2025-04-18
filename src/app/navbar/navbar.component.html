@@ -1,5 +1,6 @@
 <div class="nav" [ngClass]="{'active-class':toggleActive}">
     <!-- class="fNames" [ngClass]="{'lu':toggleActive}" -->
+    <i class="bi bi-x-lg close" *ngIf="toggleActive" (click)="closetoggle()"></i>
     <ul class="fNames" [ngClass]="{'lu':toggleActive}">
         <div class="features" routerLink="/">
             <i class="bi bi-house"></i><span >Home</span>

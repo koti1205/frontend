@@ -5,7 +5,7 @@ ul{
     list-style-type: none;
     padding-left:7%;
     padding-right: 10px;
-    padding-top: 0px;
+    padding-top: 1.2rem;
     text-transform: capitalize;
 }
 #icon{
@@ -47,7 +47,7 @@ ul{
     width: 0%;
     height: 89vh;
     position: fixed; 
-    background-color:#df7d0d;
+    background-color:#59E6FF;
     color: black;
     border-radius: 2px;
     transition:0.4s ease-in-out;
@@ -58,7 +58,7 @@ ul{
     height: 89vh;
     width: 18%; 
     position:fixed;
-    background-color: #fb8c11;
+    background-color: #59E6FF;
     z-index: 1;
     transition:0.4s ease-in-out;
 }
@@ -72,7 +72,7 @@ ul{
     transition:0.4s ease-in-out
 }
 .additional{
-    background-color: #fb8c11 ;
+    background-color: #59E6FF ;
     display:none;
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
@@ -98,6 +98,10 @@ ul{
     margin-right: 12px;
     margin-left: 5px;
     color: black;
+}
+.close{
+    float: right;
+    font-size: large;
 }
 @media(max-width:400px){
     .nav{

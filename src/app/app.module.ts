@@ -29,6 +29,13 @@ import { AddProductsComponent } from './seller-tools/add-products/add-products.c
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreComponent } from './store/store.component';
+import { BuyerDetailsComponent } from './buyer-details/buyer-details.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { SearchResultsComponent } from './search-results/search-results.component';
+
 
 const routes:Routes=[
   {
@@ -66,6 +73,12 @@ const routes:Routes=[
   },
   {
     path:'company-registration', component:CompanyRegistrationComponent
+  },
+  {
+    path:'buyers', component:BuyerDetailsComponent
+  },
+  {
+    path:'search-results', component:SearchResultsComponent
   }
 ]
 @NgModule({
@@ -90,6 +103,8 @@ const routes:Routes=[
     RateUpdationComponent,
     AddProductsComponent,
     StoreComponent,
+    BuyerDetailsComponent,
+    SearchResultsComponent,
 
   ],
   imports: [
@@ -101,6 +116,10 @@ const routes:Routes=[
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatDividerModule
   ],
   providers: [
     provideHttpClient(),

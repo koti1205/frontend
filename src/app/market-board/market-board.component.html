@@ -1,31 +1,51 @@
-<!-- <app-header></app-header>
-<app-navbar ></app-navbar>
-<app-popup></app-popup>  -->
-<h1>Market Board</h1>
-<div class="inputs" [ngClass]="{'Inputs':toggleActive}">
-    <div>
-        <input class="search" type="text" placeholder="search for products" />
-        <i id="search" class="bi bi-search"></i>
-    </div>
-    <div class="location">
-        <input *ngIf="Isvisibule" class="location" type="text" placeholder="location" />
-        <div>
-            <i *ngIf="!Isvisibule" class="bi bi-geo-alt-fill" (click)="display()"></i>
-            <p *ngIf="!Isvisibule">location</p>
-        </div>
-    </div>
+<div class="main">
+<div class="header">
+    <h1>Market Board</h1>
+    <div class="inputs" [ngClass]="{'Inputs':toggleActive}">
+       <div>
+            <input class="search" type="text" placeholder="search for products" />
+            <i id="search" class="bi bi-search"></i>
+       </div>
+       <div class="location">
+           <input *ngIf="Isvisibule" class="location" type="text" placeholder="location" />
+           <div>
+               <i *ngIf="!Isvisibule" class="bi bi-geo-alt-fill" (click)="display()"></i>
+               <p *ngIf="!Isvisibule">location</p>
+           </div>
+       </div>
+   </div>
 </div>
 <div class="content" [ngClass]="{'Inputs':toggleActive}">
     <div class="headings">
-        <p>Listed Products</p>
-        <p>Avg.Price in Location</p>
+        <h3>Listed Products</h3>
+        <h3>Products details</h3>
+        <h3>Avg Price in Location</h3>
     </div>
-    <div class="data">
-        <p>product name </p>
-        <p>price</p>
+    <div class="details">
+        <img src="" alt="photo" >
+        <div class="data">
+            <p>Product name:<label class="info">Dry fruits</label></p>
+            <p>Min Order:<label  class="info">5kg</label></p>
+            <p>Company name:<label  class="info">Priya Dry fruits</label></p>
+            <p>Quality:<label  class="info">rating</label></p>
+        </div>
+        <div class="avg">
+            <p>536 Rs/Kg</p>
+            <p>Uppal</p>
+        </div>
     </div>
-    <div class="data">
-        <p>product name/ jai balaya</p>
-        <p>price</p>
+    <div class="details">
+        <img src="" alt="photo" >
+        <div class="data">
+            <p>Product name:<span class="info">Dry fruits</span></p>
+            <p>Min Order:<label  class="info">5kg</label></p>
+            <p>Company name:<label  class="info">Priya Dry fruits</label></p>
+            <p>Quality:<label  class="info">rating</label></p>
+        </div>
+        <div class="avg">
+            <p>536 Rs/Kg</p>
+            <p>Uppal</p>
+        </div>
     </div>
+</div>
 </div>

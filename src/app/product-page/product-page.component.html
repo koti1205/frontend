@@ -5,8 +5,7 @@
     <div class="container" [ngClass]="{'Container':toggleActive}">
         <div class="card">
             <div class="card-header">
-                <h2>Seller Details</h2>
-                <button ng-click="sendQuotation()">Send Quotation</button>
+                <h2>Product Details</h2>
             </div>
 
             <div class="details">
@@ -20,6 +19,10 @@
                     <p><span class="highlight">Price:</span>{{product.price}}</p>
                     <p><span class="highlight">Seller:</span> seller</p>
                     <p><span class="highlight">Last Updated:</span> lastUpdated</p>
+                    <div class="btns">
+                        <button>Send message</button>
+                        <button>Contact Us</button>
+                    </div>
                 </div>
             </div><hr>
 

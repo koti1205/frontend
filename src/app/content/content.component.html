@@ -3,7 +3,7 @@
     <ng-container *ngIf="!isNice && isBuyerView">
         <div class="card"  *ngFor="let prod of productsData" (click)="onProductClick(prod.id)">
             <div class="img">
-                <img src="" width="240" height="200" />
+                <img src="assets/images/default-product-image.jpg" loading="lazy" width="240" height="200" />
             </div>
             <h3>{{prod.title}}</h3>
             <p>{{prod.price}} / kg<i class="bi bi-eye-fill" (mouseover)="isHovered=true" (mouseleave)="isHovered=false"></i></p>
@@ -16,16 +16,16 @@
         </div>
     </ng-container>
     <ng-container *ngIf="isNice">
-        <div class="seller-view">
+        <div class="seller-view" routerLink="buyers">
             <div class="seller-img">
-                <img src=''/>
+                <img src="assets/images/default-product-image.jpg" loading="lazy" width="80" height="80" />
             </div>
             <div class="seller-details">
                 <div>
-                    <h3>product name</h3>
+                    <h3>Lip Sticks</h3>
                 </div>
                 <div>
-                    <h4> product price</h4>
+                    <h4> 800Rs</h4>
                     <p>price / kg</p>
                 </div>
             </div>
@@ -34,14 +34,14 @@
         </div>
         <div class="seller-view">
             <div class="seller-img">
-                <img src=''/>
+                <img src="assets/images/default-product-image.jpg" loading="lazy" width="80" height="80" />
             </div>
             <div class="seller-details">
                 <div>
-                    <h3>product name</h3>
+                    <h3>Cricket Bat</h3>
                 </div>
                 <div>
-                    <h4> product price</h4>
+                    <h4> 4000Rs</h4>
                     <p>price / kg</p>
                 </div>
             </div>
@@ -50,7 +50,7 @@
         </div>    
         <div class="seller-view">
             <div class="seller-img">
-                <img src=''/>
+                <img src="assets/images/default-product-image.jpg" loading="lazy" width="80" height="80" />
             </div>
             <div class="seller-details">
                 <div>
